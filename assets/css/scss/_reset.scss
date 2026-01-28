@@ -1,0 +1,74 @@
+$text: #47504a;
+$secondary: #3584b6;
+$secondary-dark: #1b5f8a;
+$light: #fff;
+$light-2: #f3f5e9;
+$primary: #25a794;
+$primary-light: #aed5bc;
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $light-2;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 8px;
+  border: 2px solid $light-2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-light;
+}
+
+::-webkit-scrollbar-corner {
+  background: $light-2;
+}
+
+@mixin container {
+  max-width: 1210px;
+  margin: 0 auto;
+  width: 90%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: $text;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+.container {
+  @include container;
+}
+u {
+  text-decoration: underline;
+}
+s {
+  text-decoration: line-through;
+}
+p {
+  font-size: 20px;
+  line-height: 1.4;
+
+  @media (max-width: 900px) {
+    font-size: 16px;
+  }
+}
